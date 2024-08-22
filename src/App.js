@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div
-      className="h-screen w-screen flex flex-col items-center justify-center overflow-hidden relative"
+      className="h-screen w-screen flex flex-col items-center justify-center overflow-hidden relative " style={{ fontFamily: '"Press Start 2P", cursive' }}
     >
       <div
         className="absolute inset-0 bg-center bg-no-repeat bg-cover filter blur-sm"
@@ -23,43 +23,29 @@ function App() {
             src="https://ubiqcure.com/assets/images/logo2.jpg"
             className="h-[35px] lg:h-[45px] app-sidebar-logo-default theme-light-show rounded"
           />
-          <span className="ml-4 mt-1 text-blue-800 text-lg lg:text-xl font-semibold">
+          <span className="ml-4 mt-1 text-blue-800 text-3xl lg:text-3xl font-semibold ">
             UBIQ<span className="text-red-500 font-semibold">CURE</span>
           </span>
         </div>
 
         {lang === null ? (
           <div className="h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 text-center backdrop-blur-sm flex flex-col justify-center mb-3 bg-white bg-opacity-20 shadow-lg border border-gray-300 rounded-lg p-4">
-            <h1 className="text-2xl text-[#810de6] font-semibold font-sans shadow-sm">Select your language</h1>
+            <h1 className="text-3xl   text-[#c03c07] font-semibold   shadow-sm">Select your language</h1>
             <div className="flex flex-row justify-around mt-4">
               <button
-                className="flex items-center space-x-2 p-2 border border-gray-300 rounded-md bg-white hover:bg-gray-100 shadow-md"
+                className="flex items-center space-x-2 p-2   rounded-md bg-[#F2EB80] hover:bg-gray-100 shadow-md"
                 onClick={() => setLang('english')}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-6 h-6 text-blue-600"
-                >
-                  <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
-                </svg>
-                <span className="text-blue-600 font-medium">English</span>
+                
+                <span className="text-white-200  font-medium">English</span>
               </button>
 
               <button
-                className="flex items-center space-x-2 p-2 border border-gray-300 rounded-md bg-white hover:bg-gray-100 shadow-md"
+                className="flex items-center space-x-2 p-2 rounded-md bg-[#66D998] hover:bg-gray-100 shadow-md"
                 onClick={() => setLang('hindi')}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-6 h-6 text-blue-600"
-                >
-                  <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
-                </svg>
-                <span className="text-blue-600 font-medium">हिन्दी</span>
+              
+                <span className="text-white-500 font-medium">हिन्दी</span>
               </button>
             </div>
           </div>
@@ -78,13 +64,12 @@ function App() {
               </defs>
             </svg>
 
-            <p className="text-xl text-white  mt-4">You have selected English.</p>
           </div>
         ) : (
-          <div className="text-center">
+          <div className="flex flex-col justify-center items-center text-center ">
             <svg width="300" height="50" viewBox="0 0 300 50" xmlns="http://www.w3.org/2000/svg">
-              <text x="10" y="40" fontFamily="Nirmala UI, sans-serif" fontSize="40" fill="url(#grad2)" stroke="url(#grad2)" strokeWidth="1" className="animated-text">
-                आपका स्वागत है
+              <text x="30%" y="40" fontFamily="Nirmala UI, sans-serif" fontSize="40" fill="url(#grad2)" stroke="url(#grad2)" strokeWidth="1" className="animated-text flex-row justify-center items-center text-center ">
+                नमस्ते
               </text>
               <defs>
                 <linearGradient id="grad2">
@@ -95,7 +80,6 @@ function App() {
               </defs>
             </svg>
 
-            <p className="text-xl text-white mt-4">आपने हिन्दी का चयन किया है।</p>
           </div>
         )}
       </div>
