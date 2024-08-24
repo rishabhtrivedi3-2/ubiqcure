@@ -9,15 +9,15 @@ function App() {
       className="h-screen w-screen flex flex-col items-center justify-center overflow-hidden relative " style={{ fontFamily: '"Press Start 2P", cursive' }}
     >
       <div
-        className="absolute inset-0 bg-center bg-no-repeat bg-cover filter blur-sm"
+        className="absolute inset-0 bg-center bg-no-repeat bg-cover blur-sm  "
         style={{ backgroundImage: "url('https://thumbs.dreamstime.com/b/doctor-stethoscope-hand-hospital-background-gown-94227568.jpg')" }}
       ></div>
 
 
-      <div className="absolute inset-0 bg-slate-700 opacity-10"></div>
+      <div className="absolute inset-0  "></div>
 
-      <div className="relative flex flex-col items-center justify-center z-20">
-        <div className="flex flex-row items-center justify-center mb-4">
+      <div className="relative flex flex-col items-center justify-center ">
+        <div className="flex flex-row items-center justify-center mb-4 ">
           <img
             alt="Logo"
             src="https://ubiqcure.com/assets/images/logo2.jpg"
@@ -29,30 +29,32 @@ function App() {
         </div>
 
         {lang === null ? (
-          <div className="h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 text-center backdrop-blur-sm flex flex-col justify-center mb-3 bg-white bg-opacity-20 shadow-lg border border-gray-300 rounded-lg p-4">
+          <div className="h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 text-center flex flex-col justify-center mb-3 bg-white border    rounded-3xl shadow-2xl shadow-purple-500/80 p-4 ">
             <h1 className="text-3xl   text-[#c03c07] font-semibold   shadow-sm">Select your language</h1>
-            <div className="flex flex-row justify-around mt-4">
+            <div className="flex flex-row justify-around mt-5">
               <button
-                className="flex items-center space-x-2 p-2   rounded-md bg-[#F2EB80] hover:bg-gray-100 shadow-md"
+                className="flex items-center space-x-2 p-2   rounded-md bg-[#F2EB80] hover:bg-gray-100  hover:before:bg-red relative  overflow-hidden border   px-3  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-violet-700 before:transition-all before:duration-500 hover:text-white hover:shadow-violet-700 hover:before:left-0 hover:before:w-full "
+                // className="flex items-center space-x-2 p-2   rounded-md bg-[#F2EB80] hover:bg-gray-100 shadow-md"
                 onClick={() => setLang('english')}
               >
                 
-                <span className="text-white-200  font-medium">English</span>
+                <span className="text-black z-10  font-medium">English</span>
               </button>
 
               <button
-                className="flex items-center space-x-2 p-2 rounded-md bg-[#66D998] hover:bg-gray-100 shadow-md"
+                className="flex items-center space-x-2 p-2   rounded-md bg-[#66D998] hover:bg-gray-100  hover:before:bg-red relative  overflow-hidden border   px-3  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-orange-700 before:transition-all before:duration-500 hover:text-white hover:shadow-orange-700 hover:before:left-0 hover:before:w-full "
                 onClick={() => setLang('hindi')}
-              >
+                >
+                
               
-                <span className="text-white-500 font-medium">हिन्दी</span>
+                <span className="text-white-500 z-10 font-medium">हिन्दी</span>
               </button>
             </div>
           </div>
         ) : lang === 'english' ? (
           <div className="text-center">
             <svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
-              <text x="10" y="40" fontFamily="Brush Script MT, cursive" fontSize="75" fill="url(#grad1)" stroke="url(#grad1)" strokeWidth="0" className="animated-text">
+              <text x="10" y="40" fontFamily="Brush Script MT, cursive" fontSize="75" fill="url(#grad1)" stroke="url(#grad1)" strokeWidth="0" className="animated-text font-semibold">
                 welcome
               </text>
               <defs>
